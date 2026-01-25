@@ -12,7 +12,7 @@ const CertificatePage = () => {
     const [error, setError] = useState(null);
     const certificateRef = useRef(null);
 
-    const API_BASE = 'https://galaxo.onrender.com/';
+    const API_BASE = 'https://galaxo-backend.onrender.com';
 
     useEffect(() => {
         const fetchBadge = async () => {

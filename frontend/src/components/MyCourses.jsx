@@ -5,7 +5,7 @@ import { User, Play, Star, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-const API_BASE = "https://galaxo.onrender.com";
+const API_BASE = "https://galaxo-backend.onrender.com";
 
 const MyCourses = () => {
 

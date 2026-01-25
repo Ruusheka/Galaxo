@@ -22,7 +22,7 @@ import BadgeModal from "../components/BadgeModal";
 
 import { useUser, useAuth } from "@clerk/clerk-react";
 
-const API_BASE = "https://galaxo.onrender.com";
+const API_BASE = "https://galaxo-backend.onrender.com";
 
 const fmtMinutes = (mins) => {
   const h = Math.floor((mins || 0) / 60);
