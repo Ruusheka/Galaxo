@@ -12,7 +12,7 @@ const CertificatePage = () => {
     const [error, setError] = useState(null);
     const certificateRef = useRef(null);
 
-    const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:4000';
+    const API_BASE = 'https://galaxo.onrender.com/';
 
     useEffect(() => {
         const fetchBadge = async () => {
