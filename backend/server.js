@@ -13,7 +13,7 @@ const port = process.env.PORT || 4000;
 
 //MiddleWare
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174'],
+    origin: ['http://localhost:5173', 'http://localhost:5174', 'https://galaxo.onrender.com', 'https://galaxo-admin.onrender.com'],
     credentials: true,
 }));
 app.use(express.json());
