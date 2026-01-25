@@ -7,6 +7,7 @@ dotenv.config();
 
 const PAYPAL_CLIENT_ID = process.env.PAYPAL_CLIENT_ID;
 const PAYPAL_CLIENT_SECRET = process.env.PAYPAL_CLIENT_SECRET;
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://galaxo.onrender.com/";
 
 const Environment = process.env.NODE_ENV === "production" ? paypal.core.LiveEnvironment : paypal.core.SandboxEnvironment;
 const paypalClient = new paypal.core.PayPalHttpClient(new Environment(PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET));
@@ -19,7 +20,7 @@ const safeNumber = (v) => {
 
 const genBookingId = () => `BK-${uuidv4()}`;
 
-const FRONTEND_URL = process.env.FRONTEND_URL;
+
 
 
 function buildFrontendBase(req) {
