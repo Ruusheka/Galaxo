@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from '@clerk/clerk-react';
 import axios from "axios";
 
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://galaxo-backend.onrender.com';
 
 const verifyPaymentPage = () => {
     const location = useLocation();

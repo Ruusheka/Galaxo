@@ -78,7 +78,10 @@ const makeImageAbsolute = (rawImage, req) => {
     if (image.startsWith("http://") || image.startsWith("https://")) return image;
 
     const host = req.get("host");
-    const protocol = req.protocol;
+    let protocol = req.protocol;
+    if (req.get('X-Forwarded-Proto')) {
+        protocol = req.get('X-Forwarded-Proto');
+    }
 
     if (image.startsWith("/")) {
         return `${protocol}://${host}${image}`;
