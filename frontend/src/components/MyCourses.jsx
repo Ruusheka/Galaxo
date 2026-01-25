@@ -250,6 +250,10 @@ const MyCourses = () => {
         const getBadges = async () => {
             try {
                 const res = await fetch(`${API_BASE}/api/badge/user?clerkUserId=${user.id}`);
+                if (!res.ok) {
+                    // console.error("Badge fetch error", res.status);
+                    return;
+                }
                 const data = await res.json();
                 if (data.success) {
                     setBadges(data.badges);

@@ -314,6 +314,7 @@ const CourseDetailPage = () => {
     const checkBadge = async () => {
       try {
         const res = await fetch(`${API_BASE}/api/badge/user?clerkUserId=${user.id}`);
+        if (!res.ok) return;
         const data = await res.json();
         if (data.success) {
           const badgeExists = data.badges.some(b =>

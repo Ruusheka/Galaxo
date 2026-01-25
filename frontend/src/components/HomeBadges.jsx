@@ -33,6 +33,11 @@ const HomeBadges = () => {
         const fetchBadges = async () => {
             try {
                 const res = await fetch(`${API_BASE}/api/badge/user?clerkUserId=${user.id}`);
+                if (!res.ok) {
+                    const text = await res.text();
+                    console.error("Badge fetch failed:", res.status, text);
+                    return;
+                }
                 const data = await res.json();
                 if (data.success) {
                     setBadges(data.badges);

@@ -18,6 +18,10 @@ const CertificatePage = () => {
         const fetchBadge = async () => {
             try {
                 const res = await fetch(`${API_BASE}/api/badge/${id}`);
+                if (!res.ok) {
+                    setError("Certificate not found");
+                    return;
+                }
                 const data = await res.json();
                 if (data.success) {
                     setBadge(data.badge);
