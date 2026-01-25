@@ -251,8 +251,24 @@ export const getUserBookings = async (req, res) => {
     const { userId } = getAuth(req) || {};
     if (!userId) return res.status(401).json({ success: false, message: "Authentication required" });
 
-    const bookings = await Booking.find({ clerkUserId: userId }).sort({ createdAt: -1 }).lean();
-    return res.json({ success: true, bookings });
+    // Filter by paymentStatus: 'Paid' to exclude unpaid bookings
+    const bookings = await Booking.find({ clerkUserId: userId, paymentStatus: 'Paid' })
+      .sort({ createdAt: -1 })
+      .lean();
+
+    // Deduplicate by course ID (keeping the most recent one)
+    const uniqueBookings = [];
+    const seenCourses = new Set();
+
+    for (const b of bookings) {
+      const cId = b.course || b.courseId;
+      if (cId && !seenCourses.has(String(cId))) {
+        seenCourses.add(String(cId));
+        uniqueBookings.push(b);
+      }
+    }
+
+    return res.json({ success: true, bookings: uniqueBookings });
   } catch (err) {
     console.error("Error in getUserBookings:", err);
     return res.status(500).json({ success: false, message: "Internal server error" });
