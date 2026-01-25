@@ -19,7 +19,7 @@ import { useUser, useAuth } from "@clerk/clerk-react";
 import { courseDetailStyles } from "../assets/dummyStyles";
 import BadgeModal from "../components/BadgeModal";
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://galaxo-backend.onrender.com";
 
 const fmtMinutes = (mins) => {
   const h = Math.floor((mins || 0) / 60);

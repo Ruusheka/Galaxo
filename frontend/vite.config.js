@@ -8,9 +8,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:4000',
+        target: 'https://galaxo-backend.onrender.com',
         changeOrigin: true,
-        secure: false,
+        secure: false, // if using self-signed certs locally, but for render https it should be fine
       },
     },
   },

@@ -7,7 +7,7 @@ import { toast, Slide, ToastContainer } from 'react-toastify';
 import { useUser, useAuth } from '@clerk/clerk-react';
 import { Toaster } from 'react-hot-toast';
 
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://galaxo-backend.onrender.com';
 
 const StarIcon = ({ filled = false, half = false, className = "" }) => {
     if (half) {

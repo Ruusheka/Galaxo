@@ -21,7 +21,7 @@ const homeBadgeStyles = {
     emptyText: "text-slate-400 font-exo",
 };
 
-const API_BASE = "http://localhost:4000";
+const API_BASE = "https://galaxo-backend.onrender.com";
 
 const HomeBadges = () => {
     const { user, isSignedIn } = useUser();

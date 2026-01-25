@@ -7,7 +7,7 @@ import { toast, ToastContainer, Slide } from 'react-toastify';
 import { useUser, useAuth } from '@clerk/clerk-react';
 
 
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://galaxo-backend.onrender.com';
 const HomeCourses = () => {
     const navigate = useNavigate();
     const { title, course: courseFont, detail } = homeCoursesStyles.fonts;
