@@ -5,7 +5,7 @@ import { toast, Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://galaxo-backend.onrender.com';
 
 // formatDuration accepts either {hours, minutes} or (hours, minutes)
 const formatDuration = (a, b) => {

@@ -9,7 +9,7 @@ const BookingPage = () => {
     const [error, setError] = useState(null);
     const [page] = useState(1); // expose later for pagination
     const limit = 200;
-    const API_BASE = "http://localhost:4000";
+    const API_BASE = "https://galaxo-backend.onrender.com";
 
     // debounce timer and abort controller
     const debounceRef = useRef(null);
@@ -148,13 +148,13 @@ const BookingPage = () => {
                                 </div>
 
                                 <div className={bookingsStyles.detailItem}>
-                                    <BadgeIndianRupee className={bookingsStyles.detailIcon}/>
+                                    <BadgeIndianRupee className={bookingsStyles.detailIcon} />
                                     <span className={bookingsStyles.detailLabel}>Price : </span>
                                     <span className={bookingsStyles.detailValue}>₹{booking.price}</span>
                                 </div>
 
                                 <div className={bookingsStyles.detailItem}>
-                                    <GraduationCap className={bookingsStyles.detailIcon}/>
+                                    <GraduationCap className={bookingsStyles.detailIcon} />
                                     <span className={bookingsStyles.detailLabel}>Teacher : </span>
                                     <span className={bookingsStyles.detailValue}>{booking.teacherName}</span>
                                 </div>
@@ -174,7 +174,7 @@ const BookingPage = () => {
                 {!loading && bookings.length === 0 && !error && (
                     <div className={bookingsStyles.emptyState}>
                         <div className={bookingsStyles.emptyContainer}>
-                            <Search className={bookingsStyles.emptyIcon}/>
+                            <Search className={bookingsStyles.emptyIcon} />
                             <h3 className={bookingsStyles.emptyText}>No bookings found</h3>
                             <p className={bookingsStyles.emptyText}>Try searching for a different term</p>
                         </div>

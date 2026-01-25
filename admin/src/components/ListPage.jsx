@@ -11,7 +11,7 @@ const ListPage = () => {
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const API_BASE = "http://localhost:4000";
+    const API_BASE = "https://galaxo-backend.onrender.com";
 
     const getImageUrl = (imagePath) => {
         if (!imagePath) return null;

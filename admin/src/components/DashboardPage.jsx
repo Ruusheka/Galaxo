@@ -19,7 +19,7 @@ const DashboardPage = () => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
 
-    const API_BASE = "http://localhost:4000";
+    const API_BASE = "https://galaxo-backend.onrender.com";
 
     // Helper to parse duration (same as ListPage)
     const parseDuration = (v) => {
