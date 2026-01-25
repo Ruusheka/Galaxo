@@ -130,7 +130,7 @@ const HomeCourses = () => {
         const token = localStorage.getItem('token');
 
         if (!token) {
-            token.error('Please login to access courses', {
+            toast.error('Please login to access courses', {
                 position: 'top-right',
                 transition: Slide,
                 autoClose: 3000,
