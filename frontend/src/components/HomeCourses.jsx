@@ -46,6 +46,15 @@ const HomeCourses = () => {
         const fetchBadges = async () => {
             try {
                 const res = await fetch(`${API_BASE}/api/badge/user?clerkUserId=${user.id}`);
+                if (!res.ok) {
+                    console.warn(`Failed to fetch badges: ${res.status} ${res.statusText}`);
+                    return;
+                }
+                const contentType = res.headers.get("content-type");
+                if (!contentType || !contentType.includes("application/json")) {
+                    console.warn("Received non-JSON response from badge API");
+                    return;
+                }
                 const data = await res.json();
                 if (data.success) {
                     // Store set of course Ids that have badges
