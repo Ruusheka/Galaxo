@@ -2,13 +2,9 @@
 
 > A full-featured Learning Management System built with the MERN stack
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://galaxo.onrender.com/)
-[![GitHub](https://img.shields.io/badge/github-repo-blue)](https://github.com/Ruusheka/Galaxo)
-[![License](https://img.shields.io/badge/license-MIT-green)]()
-
 Galaxo is a production-ready Learning Management System designed to support the complete learning lifecycle—from course discovery to certification. Built to handle real-world challenges including payment processing, user authentication, progress tracking, and administrative analytics.
 
-![Galaxo Banner](screen.png) <!-- Add your banner image -->
+[![Galaxo Banner](screen.png)](https://galaxo.onrender.com/)
 
 ## 🌟 Features
 
